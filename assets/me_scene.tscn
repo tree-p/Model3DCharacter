@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://cvbwx80tooan3"]
+
+[ext_resource type="Script" uid="uid://dc348ci5kepkd" path="res://assets/me_scene.gd" id="1_c24je"]
+[ext_resource type="PackedScene" uid="uid://ch67gexrxta8c" path="res://assets/char_mee2.tscn" id="1_yvsi6"]
+[ext_resource type="PackedScene" uid="uid://drohrex1kgto5" path="res://assets/Wood Pile.glb" id="3_gia4h"]
+[ext_resource type="PackedScene" uid="uid://b1qhj61sc6dd0" path="res://assets/Grass Platform.glb" id="3_qh5a5"]
+[ext_resource type="PackedScene" uid="uid://cn2ae7vt75ssg" path="res://assets/House.glb" id="4_5ph4u"]
+[ext_resource type="PackedScene" uid="uid://bre7a27qd2knl" path="res://assets/Tree.glb" id="5_2rdvt"]
+
+[sub_resource type="Environment" id="Environment_gia4h"]
+background_mode = 1
+background_color = Color(0.631932, 0.400165, 0.471249, 0.635294)
+
+[node name="me_scene" type="Node3D"]
+script = ExtResource("1_c24je")
+
+[node name="char_mee1" parent="." instance=ExtResource("1_yvsi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.551538)
+
+[node name="char_mee2" parent="." instance=ExtResource("1_yvsi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97389, 0, -1.40547)
+
+[node name="char_mee3" parent="." instance=ExtResource("1_yvsi6")]
+transform = Transform3D(0.983885, 0, 0.178802, 0, 1, 0, -0.178802, 0, 0.983885, -4.72304, 0, 0.551538)
+
+[node name="char_mee4" parent="." instance=ExtResource("1_yvsi6")]
+transform = Transform3D(0.832099, 0, -0.554627, 0, 1, 0, 0.554627, 0, 0.832099, 8.93691, 0, -0.75126)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.29415, 4, 11)
+environment = SubResource("Environment_gia4h")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.976092, 0.21736, 0, -0.21736, 0.976092, -0.0150318, 19.2873, 0)
+shadow_enabled = true
+
+[node name="platform" type="Node3D" parent="."]
+
+[node name="Wood Pile" parent="platform" instance=ExtResource("3_gia4h")]
+transform = Transform3D(6.7934, 0, 4.2249, 0, 8, 0, -4.2249, 0, 6.7934, 7.15728, -0.450908, -8.43111)
+
+[node name="Grass Platform" parent="platform" instance=ExtResource("3_qh5a5")]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0.419429, -10.9525, -5.14175)
+
+[node name="house" parent="platform" instance=ExtResource("4_5ph4u")]
+transform = Transform3D(6.41356, 0, 7.67244, 0, 10, 0, -7.67244, 0, 6.41356, -4.76986, 0, -6.23688)
+
+[node name="tree" parent="platform" instance=ExtResource("5_2rdvt")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -11.6245, 0, -14.9171)
+
+[node name="tree2" parent="platform" instance=ExtResource("5_2rdvt")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -4.67668, 0, -16.1666)
+
+[node name="tree3" parent="platform" instance=ExtResource("5_2rdvt")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -0.0716143, 0, -14.9171)
+
+[node name="tree4" parent="platform" instance=ExtResource("5_2rdvt")]
+transform = Transform3D(4.28665, 0, 2.57384, 0, 5, 0, -2.57384, 0, 4.28665, 8.65264, 0, -14.6885)
+
+[node name="tree5" parent="platform" instance=ExtResource("5_2rdvt")]
+transform = Transform3D(3.98203, 0, -0.378727, 0, 4, 0, 0.378727, 0, 3.98203, 12.6786, -0.903017, -9.57159)
+
+[node name="tree6" parent="platform" instance=ExtResource("5_2rdvt")]
+transform = Transform3D(4.28665, 0, 2.57384, 0, 5, 0, -2.57384, 0, 4.28665, -12.3635, 0, -3.14605)
+
+[node name="tree7" parent="platform" instance=ExtResource("5_2rdvt")]
+transform = Transform3D(2.57612, 0, 3.06, 0, 4, 0, -3.06, 0, 2.57612, -10.0984, 0, 2.0874)
+
+[node name="tree8" parent="platform" instance=ExtResource("5_2rdvt")]
+transform = Transform3D(2.32463, 0, -3.25516, 0, 4, 0, 3.25516, 0, 2.32463, 13.6229, 0, -0.735538)
